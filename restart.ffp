@@ -1,0 +1,8 @@
+str /Users/wbotellosmith/Documents/ETDM_Parameterization/ethidium.str
+wd /Users/wbotellosmith/Documents/ETDM_Parameterization
+ff additive
+resn ETDM
+charmm
+gauss
+lsfit
+cgenff /raid/kaushik/nsf/cgenff/2.2.0/lp/cgenff -r /raid/kaushik/nsf/cgenff/2.2.0/lp/cgenff.rules 
