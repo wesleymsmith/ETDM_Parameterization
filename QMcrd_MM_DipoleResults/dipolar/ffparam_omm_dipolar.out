@@ -1,0 +1,7 @@
+Loading CHARMM Parameters
+All CHARMM Parameters loaded successfully.
+Energy at Minima is 79.042 kcal/mol
+Center of Geometry found at:  (0.03973180682144382, -0.2230047138238495, 0.06110902621664784)
+Sum of charges = 0.9999999999999996 e
+Dipole moment in DEBYE:  -3.0663939102987796 -5.441798912635964 0.6873997337778515 6.283984835491032
+Written MM dipole in /Users/wbotellosmith/Documents/ETDM_Parameterization/dipolar/omm_dipolar_etdm.txt
