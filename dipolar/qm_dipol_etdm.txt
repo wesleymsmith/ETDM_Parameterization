@@ -1,0 +1,2 @@
+##### D_X D_Y D_Z D_Tot QM Value of ETDM
+     -1.2413    -0.4311    0.0884    1.317
