@@ -1,0 +1,194 @@
+
+*** tstart() called on PSD004-MB-S
+*** at Thu Nov 12 10:31:02 2020
+
+   => Loading Basis Set <=
+
+    Name: 6-31G*
+    Role: ORBITAL
+    Keyword: BASIS
+    atoms 1, 3 entry H          line    44 file /Users/wbotellosmith/opt/anaconda3/envs/ffparam/share/psi4/basis/6-31gs.gbs 
+    atoms 2    entry O          line   145 file /Users/wbotellosmith/opt/anaconda3/envs/ffparam/share/psi4/basis/6-31gs.gbs 
+
+
+         ---------------------------------------------------------
+                                   SCF
+               by Justin Turney, Rob Parrish, Andy Simmonett
+                          and Daniel G. A. Smith
+                              RHF Reference
+                        4 Threads,    953 MiB Core
+         ---------------------------------------------------------
+
+  ==> Geometry <==
+
+    Molecular point group: cs
+    Full point group: Cs
+
+    Geometry (in Angstrom), charge = 0, multiplicity = 1:
+
+       Center              X                  Y                   Z               Mass       
+    ------------   -----------------  -----------------  -----------------  -----------------
+         H           -0.333659276093     0.855786258349     0.000000000000     1.007825032230
+         O           -0.036851415485    -0.054233395886     0.000000000000    15.994914619570
+         H            0.918517982165     0.004937090429     0.000000000000     1.007825032230
+
+  Running in cs symmetry.
+
+  Rotational constants: A =     27.43505  B =     14.59645  C =      9.52748 [cm^-1]
+  Rotational constants: A = 822482.25461  B = 437590.48361  C = 285626.69173 [MHz]
+  Nuclear repulsion =    9.194967903592044
+
+  Charge       = 0
+  Multiplicity = 1
+  Electrons    = 10
+  Nalpha       = 5
+  Nbeta        = 5
+
+  ==> Algorithm <==
+
+  SCF Algorithm Type is DF.
+  DIIS enabled.
+  MOM disabled.
+  Fractional occupation disabled.
+  Guess Type is SAD.
+  Energy threshold   = 1.00e-06
+  Density threshold  = 1.00e-06
+  Integral threshold = 0.00e+00
+
+  ==> Primary Basis <==
+
+  Basis Set: 6-31G*
+    Blend: 6-31G*
+    Number of shells: 10
+    Number of basis function: 19
+    Number of Cartesian functions: 19
+    Spherical Harmonics?: false
+    Max angular momentum: 2
+
+   => Loading Basis Set <=
+
+    Name: (6-31G* AUX)
+    Role: JKFIT
+    Keyword: DF_BASIS_SCF
+    atoms 1, 3 entry H          line    51 file /Users/wbotellosmith/opt/anaconda3/envs/ffparam/share/psi4/basis/cc-pvdz-jkfit.gbs 
+    atoms 2    entry O          line   221 file /Users/wbotellosmith/opt/anaconda3/envs/ffparam/share/psi4/basis/cc-pvdz-jkfit.gbs 
+
+  ==> Pre-Iterations <==
+
+   -------------------------------------------------------
+    Irrep   Nso     Nmo     Nalpha   Nbeta   Ndocc  Nsocc
+   -------------------------------------------------------
+     A'        15      15       0       0       0       0
+     A"         4       4       0       0       0       0
+   -------------------------------------------------------
+    Total      19      19       5       5       5       0
+   -------------------------------------------------------
+
+  ==> Integral Setup <==
+
+  DFHelper Memory: AOs need 0.001 GiB; user supplied 0.698 GiB. Using in-core AOs.
+
+  ==> MemDFJK: Density-Fitted J/K Matrices <==
+
+    J tasked:                   Yes
+    K tasked:                   Yes
+    wK tasked:                   No
+    OpenMP threads:               4
+    Memory [MiB]:               715
+    Algorithm:                 Core
+    Schwarz Cutoff:           1E-12
+    Mask sparsity (%):       0.0000
+    Fitting Condition:        1E-10
+
+   => Auxiliary Basis Set <=
+
+  Basis Set: (6-31G* AUX)
+    Blend: CC-PVDZ-JKFIT
+    Number of shells: 42
+    Number of basis function: 131
+    Number of Cartesian functions: 131
+    Spherical Harmonics?: false
+    Max angular momentum: 3
+
+  Minimum eigenvalue in the overlap matrix is 2.2280243812E-02.
+  Using Symmetric Orthogonalization.
+
+  SCF Guess: Superposition of Atomic Densities via on-the-fly atomic UHF.
+
+  ==> Iterations <==
+
+                           Total Energy        Delta E     RMS |[F,P]|
+
+   @DF-RHF iter SAD:   -75.52490194983412   -7.55249e+01   0.00000e+00 
+   @DF-RHF iter   1:   -75.93985726771629   -4.14955e-01   2.62892e-02 DIIS
+   @DF-RHF iter   2:   -75.99166140569622   -5.18041e-02   1.52963e-02 DIIS
+   @DF-RHF iter   3:   -76.01013822040279   -1.84768e-02   1.36006e-03 DIIS
+   @DF-RHF iter   4:   -76.01048391432789   -3.45694e-04   3.16353e-04 DIIS
+   @DF-RHF iter   5:   -76.01050273077834   -1.88165e-05   5.81327e-05 DIIS
+   @DF-RHF iter   6:   -76.01050364841402   -9.17636e-07   8.96574e-06 DIIS
+   @DF-RHF iter   7:   -76.01050367215981   -2.37458e-08   1.45066e-06 DIIS
+   @DF-RHF iter   8:   -76.01050367280604   -6.46224e-10   3.12619e-07 DIIS
+  Energy and wave function converged.
+
+
+  ==> Post-Iterations <==
+
+    Orbital Energies [Eh]
+    ---------------------
+
+    Doubly Occupied:                                                      
+
+       1Ap   -20.560366     2Ap    -1.341806     3Ap    -0.706946  
+       4Ap    -0.570999     1App   -0.497897  
+
+    Virtual:                                                              
+
+       5Ap     0.210755     6Ap     0.304185     7Ap     1.022740  
+       8Ap     1.131824     2App    1.167826     9Ap     1.171757  
+      10Ap     1.380956    11Ap     1.434096    12Ap     2.020790  
+       3App    2.034319     4App    2.068523    13Ap     2.622825  
+      14Ap     2.947590    15Ap     3.970630  
+
+    Final Occupation by Irrep:
+             Ap   App 
+    DOCC [     4,    1 ]
+
+  @DF-RHF Final Energy:   -76.01050367280604
+
+   => Energetics <=
+
+    Nuclear Repulsion Energy =              9.1949679035920440
+    One-Electron Energy =                -123.0549121588404660
+    Two-Electron Energy =                  37.8494405824423978
+    Total Energy =                        -76.0105036728060242
+
+Computation Completed
+
+
+Properties will be evaluated at   0.000000,   0.000000,   0.000000 [a0]
+
+Properties computed using the SCF density matrix
+
+  Nuclear Dipole Moment: [e a0]
+     X:     0.5481      Y:     0.8066      Z:     0.0000
+
+  Electronic Dipole Moment: [e a0]
+     X:    -0.0561      Y:    -0.0826      Z:     0.0000
+
+  Dipole Moment: [e a0]
+     X:     0.4920      Y:     0.7240      Z:     0.0000     Total:     0.8754
+
+  Dipole Moment: [D]
+     X:     1.2505      Y:     1.8403      Z:     0.0000     Total:     2.2250
+
+
+*** tstop() called on PSD004-MB-S at Thu Nov 12 10:31:02 2020
+Module time:
+	user time   =       0.67 seconds =       0.01 minutes
+	system time =       0.04 seconds =       0.00 minutes
+	total time  =          0 seconds =       0.00 minutes
+Total time:
+	user time   =       0.67 seconds =       0.01 minutes
+	system time =       0.04 seconds =       0.00 minutes
+	total time  =          0 seconds =       0.00 minutes
+INTERACTION MONOMER ENERGY is : -76.01050367280604
