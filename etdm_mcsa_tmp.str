@@ -17,13 +17,13 @@ read rtf card append
 !Regrouped by functional group by Payal Chatterjee
 RESI ETDM          1.000 ! param penalty= 114.500 ; charge penalty=  72.226
 GROUP            ! CHARGE   CH_PENALTY
-ATOM  C4     CG2R67    0.350 
-ATOM  C5     CG2R62    0.040 
-ATOM  N1     NG2R61    0.113 
-ATOM  C9     CG324     0.055 
+ATOM  C4     CG2R67    0.361 
+ATOM  C5     CG2R62    0.043 
+ATOM  N1     NG2R61    0.118 
+ATOM  C9     CG324     0.051 
 ATOM  H25    HGA2      0.090 
 ATOM  H26    HGA2      0.090 
-ATOM  C17    CG331    -0.232 
+ATOM  C17    CG331    -0.247 
 ATOM  H31    HGA3      0.090 
 ATOM  H32    HGA3      0.090 
 ATOM  H33    HGA3      0.090 
@@ -42,29 +42,29 @@ ATOM  C19    CG2R61   -0.042
 ATOM  H35    HGR61     0.115 
 ATOM  C16    CG2R61   -0.042 
 GROUP !SIDE-CHAIN RING
-ATOM  C10    CG2R67   -0.017 
-ATOM  C21    CG2R61   -0.110 
+ATOM  C10    CG2R67    0.079 
+ATOM  C21    CG2R61   -0.126 
 ATOM  H37    HGR61     0.115 
-ATOM  C12    CG2R61   -0.110 
+ATOM  C12    CG2R61   -0.126 
 ATOM  H28    HGR61     0.115 
-ATOM  C23    CG2R61   -0.110 
+ATOM  C23    CG2R61   -0.126 
 ATOM  H39    HGR61     0.115 
-ATOM  C24    CG2R61   -0.110 
+ATOM  C24    CG2R61   -0.126 
 ATOM  H44    HGR61     0.115 
-ATOM  C22    CG2R61   -0.110 
+ATOM  C22    CG2R61   -0.126 
 ATOM  H38    HGR61     0.115 
-ATOM  C20    CG2R61   -0.110 
+ATOM  C20    CG2R61   -0.126 
 ATOM  H36    HGR61     0.115 
 GROUP !RING3
-ATOM  C13    CG2R61   -0.043 
+ATOM  C13    CG2R61   -0.051 
 ATOM  H29    HGR61     0.115 
-ATOM  C15    CG2R61   -0.043 
-ATOM  N3     NG2S3    -0.758 
+ATOM  C15    CG2R61   -0.051 
+ATOM  N3     NG2S3    -0.725 
 ATOM  H42    HGP4      0.382 
 ATOM  H43    HGP4      0.382 
-ATOM  C11    CG2R61   -0.043 
+ATOM  C11    CG2R61   -0.051 
 ATOM  H27    HGR61     0.115 
-ATOM  C18    CG2R61   -0.043 
+ATOM  C18    CG2R61   -0.051 
 ATOM  H34    HGR61     0.115 
 
 BOND N1   C4  
