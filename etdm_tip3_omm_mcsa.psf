@@ -4,7 +4,7 @@ PSF EXT CMAP CHEQ XPLOR
 * Created by rtftopsf, a part of FFParam Package
 * DATE:     2020-11-13 11:09      WRITTEN BY: Anmol Kumar
 
-        44 !NATOM
+        47 !NATOM
          1 ETDM     1        ETDM     C4       CG2R67     0.35000       12.0110     0  0.00000   -0.301140E-02
          2 ETDM     1        ETDM     C5       CG2R62     0.04000       12.0110     0  0.00000   -0.301140E-02
          3 ETDM     1        ETDM     N1       NG2R61     0.11300       14.0070     0  0.00000   -0.301140E-02
@@ -49,8 +49,11 @@ PSF EXT CMAP CHEQ XPLOR
         42 ETDM     1        ETDM     H27      HGR61      0.11500        1.0080     0  0.00000   -0.301140E-02
         43 ETDM     1        ETDM     C18      CG2R61    -0.04300       12.0110     0  0.00000   -0.301140E-02
         44 ETDM     1        ETDM     H34      HGR61      0.11500        1.0080     0  0.00000   -0.301140E-02
+        45 TIP3     1        TIP3     OH2      OT        -0.83400       15.9994     0  0.00000   -0.301140E-02
+        46 TIP3     1        TIP3     H1       HT         0.41700        1.0080     0  0.00000   -0.301140E-02
+        47 TIP3     1        TIP3     H2       HT         0.41700        1.0080     0  0.00000   -0.301140E-02
 
-        47 !NBOND: bonds
+        50 !NBOND: bonds
          3         1         3         2         3         4         1        14
          1        22         2        15         2        41         4         7
          4         5         4         6        11        37        11        12
@@ -62,9 +65,10 @@ PSF EXT CMAP CHEQ XPLOR
         17        18         7         8         7         9         7        10
         33        31        33        34        23        27        23        24
         43        44        19        20        31        29        31        32
-        27        29        27        28        29        30
+        27        29        27        28        29        30        45        46
+        45        47        46        47
 
-        78 !NTHETA: angles
+        79 !NTHETA: angles
          1         3         2         1         3         4         2         3         4
          3         1        14         3         1        22        14         1        22
          3         2        15         3         2        41        15         2        41
@@ -91,7 +95,7 @@ PSF EXT CMAP CHEQ XPLOR
         33        31        29        33        31        32        29        31        32
         23        27        29        23        27        28        29        27        28
         31        29        27        31        29        30        27        29        30
-
+        46        45        47
 
        115 !NPHI: dihedrals
          3         1        14        16         3         1        14        25
@@ -157,11 +161,11 @@ PSF EXT CMAP CHEQ XPLOR
         11        13        12        37        38        40        39        21
 
 
-         0 !NDON: donors
+         2 !NDON: donors
+        45        46        45        47
 
-
-         0 !NACC: acceptors
-
+         1 !NACC: acceptors
+        45         0
 
          0 !NNB
 
@@ -170,12 +174,12 @@ PSF EXT CMAP CHEQ XPLOR
          0         0         0         0         0         0         0         0
          0         0         0         0         0         0         0         0
          0         0         0         0         0         0         0         0
-         0         0         0         0
+         0         0         0         0         0         0         0
 
-         6         0 !NGRP NST2
+         7         0 !NGRP NST2
          0         2         0        10         2         0        13         2         0
         16         2         0        21         2         0        34         2         0
-
+        44         1         0
 
          1 !MOLNT
          1         1         1         1         1         1         1         1
@@ -183,7 +187,7 @@ PSF EXT CMAP CHEQ XPLOR
          1         1         1         1         1         1         1         1
          1         1         1         1         1         1         1         1
          1         1         1         1         1         1         1         1
-         1         1         1         1
+         1         1         1         1         1         1         1
 
          0         0 !NUMLP NUMLPH
 

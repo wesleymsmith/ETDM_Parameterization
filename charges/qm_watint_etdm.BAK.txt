@@ -11,6 +11,7 @@ ETDM_H43_WAT_0        -9.606    2.05
 ETDM_H43_WAT_90        -8.331    2.1 
 ETDM_N2_WAT_LN1         2.147    3.0 
 ETDM_N2_WAT_LN2         2.579    3.0 
+ETDM_N2_WAT_LP1         6.437    3.0 
 ETDM_N2_WAT_LP2         1.442    3.0 
 ETDM_N3_WAT_LN1         1.831    3.0 
 ETDM_N3_WAT_LN2        -0.216    2.55 
