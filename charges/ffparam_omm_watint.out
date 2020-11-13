@@ -1,0 +1,5 @@
+ERROR:root:Warning: Your total charge does not match the sum of partial charges.
+ERROR:root:Warning: Your total charge does not match the sum of partial charges.
+Loading CHARMM Parameters
+All CHARMM Parameters loaded successfully.
+Written MM interaction energy in /Users/wbotellosmith/Documents/ETDM_Parameterization/charges/omm_watint_etdm.txt
