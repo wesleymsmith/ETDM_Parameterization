@@ -1,4 +1,4 @@
-str /Users/wbotellosmith/Documents/ETDM_Parameterization/etdm_mcsa_bstrms.watint_pass1_regroup.str
+str /Users/wbotellosmith/Documents/ETDM_Parameterization/ethidium.str
 wd /Users/wbotellosmith/Documents/ETDM_Parameterization
 ff additive
 resn ETDM
