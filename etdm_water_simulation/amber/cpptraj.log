@@ -1,0 +1,8 @@
+# 12/09/20 16:20:36
+# step3_input.parm7
+# Loaded topologies:
+#   step3_input.parm7
+trajin step7_production.nc
+trajout step7_production.dcd
+go
+quit
