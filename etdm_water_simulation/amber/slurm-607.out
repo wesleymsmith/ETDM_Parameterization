@@ -1,0 +1,12 @@
+running:
+/cm/shared/apps/amber20/bin/pmemd.cuda -O -i step6_pressureEquilibration.mdin -c step5_production.rst7
+-p step3_input.parm7 -r step6_pressureEquilibration.rst7 -ref step5_production.rst7 
+-o step6_pressureEquilibration.out -x step6_pressureEquilibration.nc
+running:
+/cm/shared/apps/amber20/bin/pmemd.cuda -O -i step7_production.mdin -c step6_pressureEquilibration.rst7
+-p step3_input.parm7 -r step7_production.rst7 -ref step6_pressureEquilibration.rst7 
+-o step7_production.out -x step7_production.nc
+running:
+/cm/shared/apps/amber20/bin/pmemd.cuda -O -i step5_production.mdin -c step7_production.rst7
+-p step3_input.parm7 -r step5_production.rst7 -ref step7_production.rst7 
+-o step5_production.out -x step5_production.nc
