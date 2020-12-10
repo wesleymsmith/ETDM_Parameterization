@@ -10,3 +10,4 @@ running:
 /cm/shared/apps/amber20/bin/pmemd.cuda -O -i step5_production.mdin -c step7_production.rst7
 -p step3_input.parm7 -r step5_production.rst7 -ref step7_production.rst7 
 -o step5_production.out -x step5_production.nc
+done
