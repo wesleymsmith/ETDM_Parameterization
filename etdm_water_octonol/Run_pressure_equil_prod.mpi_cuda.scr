@@ -13,8 +13,8 @@ source /etc/profile.d/modules.sh
 set -e
 toppath="etdm_water_octonol.parm7"
 
-step="step4.2_equilibration"
-prev_step="step4.1_equilibration"
+step="step4.3_equilibration"
+prev_step="step4.2_equilibration"
 echo "running z-pressure equilibration (semi-isotropic):" 
 echo "$AMBERHOME/bin/pmemd.cuda -O -i $step.mdin -c $prev_step.rst7"
 echo "-p $toppath -r $step.rst7 -ref $prev_step.rst7 "

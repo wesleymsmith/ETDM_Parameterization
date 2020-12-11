@@ -1,27 +1,26 @@
 
- NSTEP =  1193000   TIME(PS) =    2443.000  TEMP(K) =   306.99  PRESS =     0.0
- Etot   =    -28753.2752  EKtot   =     28293.2988  EPtot      =    -57046.5740
- BOND   =      1695.3670  ANGLE   =      8124.3666  DIHED      =      5643.9828
- UB     =      2386.5701  IMP     =        -1.8311  CMAP       =         0.0000
- 1-4 NB =       420.3104  1-4 EEL =     -2582.0684  VDWAALS    =       779.2616
- EELEC  =    -77910.0917  EHBOND  =         0.0000  RESTRAINT  =      4397.5587
- EAMBER (non-restraint)  =    -61444.1327
- EKCMT  =         0.0000  VIRIAL  =         0.0000  VOLUME     =    837308.5385
+ NSTEP =   774000   TIME(PS) =    3274.000  TEMP(K) =   303.77  PRESS =     0.0
+ Etot   =    -31516.1087  EKtot   =     27996.5430  EPtot      =    -59512.6516
+ BOND   =      1699.9435  ANGLE   =      8215.6695  DIHED      =      5560.9828
+ UB     =      2418.9574  IMP     =        -1.8339  CMAP       =         0.0000
+ 1-4 NB =       424.8961  1-4 EEL =     -2638.9286  VDWAALS    =     -1305.6848
+ EELEC  =    -73886.6537  EHBOND  =         0.0000  RESTRAINT  =         0.0000
+ EKCMT  =         0.0000  VIRIAL  =         0.0000  VOLUME     =    686691.4978
                                                     SURFTEN    =         0.0000
-                                                    Density    =         0.4576
+                                                    Density    =         0.5580
  ------------------------------------------------------------------------------
 | Current Timing Info
 | -------------------
-| Total steps:   1250000 | Completed:   1193000 ( 95.4%) | Remaining:     57000
+| Total steps:   1250000 | Completed:    774000 ( 61.9%) | Remaining:    476000
 |
-| Average timings for last   66000 steps:
-|     Elapsed(s) =      60.60 Per Step(ms) =       0.92
-|         ns/day =      94.10   seconds/ns =     918.17
+| Average timings for last   63000 steps:
+|     Elapsed(s) =      59.69 Per Step(ms) =       0.95
+|         ns/day =      91.19   seconds/ns =     947.44
 |
 | Average timings for all steps:
-|     Elapsed(s) =    1080.92 Per Step(ms) =       0.91
-|         ns/day =      95.36   seconds/ns =     906.05
+|     Elapsed(s) =     720.33 Per Step(ms) =       0.93
+|         ns/day =      92.84   seconds/ns =     930.66
 |
 |
-| Estimated time remaining:      51.6 seconds.
+| Estimated time remaining:       7.4 minutes.
  ------------------------------------------------------------------------------

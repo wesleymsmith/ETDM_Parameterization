@@ -1,0 +1,13 @@
+# Log started on 12/11/2020 [mm/dd/yyyy] at 13:08:48
+help gromber
+quit
+# Log started on 12/11/2020 [mm/dd/yyyy] at 13:10:18
+help gromber
+gromber topol.top octanol.gro topdir gromacs
+quit
+# Log started on 12/11/2020 [mm/dd/yyyy] at 13:11:36
+gromber topol.top out.gro topdir gromacs
+writeCoordinates ocoh_box.pdb
+help outparm
+outparm ocoh_box.parm7 ocoh_box.rst7
+go
