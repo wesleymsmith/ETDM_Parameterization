@@ -1,0 +1,11 @@
+running minimization:
+/cm/shared/apps/amber20/bin/pmemd.cuda -O -i step4.0_minimization.mdin -c ocoh_box.rst7
+-p ocoh_box.parm7 -r step4.0_minimization.rst7 -ref ocoh_box.rst7 
+-o step4.0_minimization.out -x step4.0_minimization.nc
+running thermalequilibration:
+/cm/shared/apps/amber20/bin/pmemd.cuda -O -i step4.1_equilibration.mdin -c step4.0_minimization.rst7
+-p ocoh_box.parm7 -r step4.1_equilibration.rst7 -ref step4.0_minimization.rst7 
+-o step4.1_equilibration.out -x step4.1_equilibration.nc
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+slurmstepd: error: *** STEP 639.1 ON node001 CANCELLED AT 2020-12-11T14:34:22 ***
+slurmstepd: error: *** JOB 639 ON node001 CANCELLED AT 2020-12-11T14:34:22 ***

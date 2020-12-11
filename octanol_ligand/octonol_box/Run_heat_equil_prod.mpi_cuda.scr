@@ -1,0 +1,50 @@
+#!/bin/bash
+##SBATCH -D  /home/yichun/cx26_K_milestoning/test_amber20/
+#SBATCH -J etdm_wat
+#SBATCH --partition=defq
+#SBATCH --get-user-env
+#SBATCH --nodes=1
+#SBATCH --tasks-per-node=1
+#SBATCH --gres=gpu:1
+#SBATCH --time=08:00:00
+#####SBATCH --share
+source /etc/profile.d/modules.sh
+
+set -e
+toppath="ocoh_box.parm7"
+
+step="step4.0_minimization"
+prev_step="ocoh_box"
+echo "running minimization:" 
+echo "$AMBERHOME/bin/pmemd.cuda -O -i $step.mdin -c $prev_step.rst7"
+echo "-p $toppath -r $step.rst7 -ref $prev_step.rst7 "
+echo "-o $step.out -x $step.nc"
+srun $AMBERHOME/bin/pmemd.cuda -O -i $step.mdin -c $prev_step.rst7 \
+		-p $toppath -r $step.rst7 -ref $prev_step.rst7 \
+		-o $step.out -x $step.nc
+
+for ii in 1 2 3 4
+do
+ prev_step=$step
+ step="step4.${ii}_equilibration"
+ echo "running thermalequilibration:" 
+ echo "$AMBERHOME/bin/pmemd.cuda -O -i $step.mdin -c $prev_step.rst7"
+ echo "-p $toppath -r $step.rst7 -ref $prev_step.rst7 "
+ echo "-o $step.out -x $step.nc"
+ srun $AMBERHOME/bin/pmemd.cuda -O -i $step.mdin -c $prev_step.rst7 \
+		-p $toppath -r $step.rst7 -ref $prev_step.rst7 \
+		-o $step.out -x $step.nc
+done
+
+prev_step=$step
+step="step4.5_equilibration"
+echo "running pressure equilibration:" 
+echo "$AMBERHOME/bin/pmemd.cuda -O -i $step.mdin -c $prev_step.rst7"
+echo "-p $toppath -r $step.rst7 -ref $prev_step.rst7 "
+echo "-o $step.out -x $step.nc"
+srun $AMBERHOME/bin/pmemd.cuda -O -i $step.mdin -c $prev_step.rst7 \
+		-p $toppath -r $step.rst7 -ref $prev_step.rst7 \
+		-o $step.out -x $step.nc
+
+echo "done"
+

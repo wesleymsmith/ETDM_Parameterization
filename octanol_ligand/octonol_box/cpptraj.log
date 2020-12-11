@@ -1,0 +1,9 @@
+# 12/11/20 15:10:52
+# ocoh_box.parm7
+# Loaded topologies:
+#   ocoh_box.parm7
+trajin step4.7_equilibration.rst7
+trajout ocoh_box.final.rst7
+trajout ocoh_box.final.pdb
+go
+quit

@@ -1,0 +1,5 @@
+running thermalequilibration:
+/cm/shared/apps/amber20/bin/pmemd.cuda -O -i step4.7_equilibration.mdin -c step4.6_equilibration.rst7
+-p ocoh_box.parm7 -r step4.7_equilibration.rst7 -ref step4.6_equilibration.rst7 
+-o step4.7_equilibration.out -x step4.7_equilibration.nc
+done
