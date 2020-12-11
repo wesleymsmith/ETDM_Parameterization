@@ -19,7 +19,7 @@ kcal2kJ = 4.184
 comment = '!'
 
 if len(sys.argv) != 3:
-	print "useage: psf2itp.py topparPath psfFile"
+	print ("useage: psf2itp.py topparPath psfFile")
 	exit()
 
 #-------------------------------------------#
@@ -35,7 +35,7 @@ for filename in os.listdir(path):
 		parFiles.append(path+'/'+filename)
 
 if len(parFiles) == 0:
-	print "Fatal error: incorrect toppar path"
+	print ("Fatal error: incorrect toppar path")
 	exit()
 
 index2type     = {}
@@ -119,7 +119,7 @@ for parfile in parFiles:
                                 Kb = float(segments[2])
                                 b0 = float(b0)/10		# conversion from A -> nm
                                 Kb = Kb*2*kcal2kJ*1000/10	# converstion from kcal/mole/A**2 -> kJ/mole/nm**2 incl factor 2 (see definitions)
-				type2bond[type1, type2] = [b0, Kb]
+                                type2bond[type1, type2] = [b0, Kb]
 
 			if readprm == 'angle':
                                 type1 = segments[0]
@@ -142,7 +142,7 @@ for parfile in parFiles:
                                 if not ubFlag:
                                         S0  = 0.0
                                         Kub = 0.0
-				type2angle[type1, type2, type3] = [th0, cth, S0, Kub]
+                                type2angle[type1, type2, type3] = [th0, cth, S0, Kub]
 
 			if readprm == 'dihedral':
                                 type1 = segments[0]
@@ -156,11 +156,11 @@ for parfile in parFiles:
                                 if type1 == 'X' and type4 == 'X':	# look for wildcards in positions 1 and 4
                                         dihWilds.append([type2, type3, phi0, cp, mult])	# save them in a list
                                 else:					# no wildcard - write to bon file
-					try:
-						type2dihedral[type1, type2, type3, type4] += [phi0, cp, mult]
-					except:
-						type2dihedral[type1, type2, type3, type4] = [phi0, cp, mult]
-					type2mult[type1, type2, type3, type4] = len(type2dihedral[type1, type2, type3, type4])/3
+                                        try:
+                                                type2dihedral[type1, type2, type3, type4] += [phi0, cp, mult]
+                                        except:
+                                                type2dihedral[type1, type2, type3, type4] = [phi0, cp, mult]
+                                        type2mult[type1, type2, type3, type4] = len(type2dihedral[type1, type2, type3, type4])/3
 
 			if readprm == 'improper':
                                 type1 = segments[0]
@@ -173,7 +173,7 @@ for parfile in parFiles:
                                 if type2 == 'X' and type3 == 'X':	# look for wildcards in positions 2 and 3
                                         impWilds.append([type1, type4, q0, cq])		# save them in a list
                                 else:					# no wildcard - write to bon file
-					type2improper[type1, type2, type3, type4] = [q0, cq]
+                                        type2improper[type1, type2, type3, type4] = [q0, cq]
 
 			if readprm == 'cmap':
 				try:
@@ -210,15 +210,15 @@ for parfile in parFiles:
                                                 eps14      = abs(epsilon14*kcal2kJ)		# conversion to gromacs units
                                                 Rmin14Half = float(segments[6])			# read charmm Rmin*1/2
                                                 sigma14    = 2*Rmin14Half/(10.0*2.0**(1.0/6.0))	# conversion to gromacs units
-		                                type2pair[type] = [sigma14, eps14]		# add to list
+                                                type2pair[type] = [sigma14, eps14]		# add to list
 
 			if readprm == 'nbfix':
 				type1 = segments[0]
 				type2 = segments[1]
 				epsilon = float(segments[2])
-                                Rmin    = float(segments[3])
-                                eps     = abs(epsilon*kcal2kJ)		# conversion to kJ and positive
-                                sigma   = Rmin/(10.0*2.0**(1.0/6.0))	# -> nm, double distance and rmin2sigma factor
+				Rmin    = float(segments[3])
+				eps     = abs(epsilon*kcal2kJ)		# conversion to kJ and positive
+				sigma   = Rmin/(10.0*2.0**(1.0/6.0))	# -> nm, double distance and rmin2sigma factor
 				type2nbfix[type1,type2] = [sigma, eps]
 
 
@@ -384,7 +384,7 @@ for line in psfFile:
 
 		if readpsf == 'bond':
 			bondNumber = len(segments)/2
-			for i in range(bondNumber):
+			for i in range(int(bondNumber)):
 				atom1 = int(segments[2*i+0])
 				atom2 = int(segments[2*i+1])
 				for imol in range(len(mol)):
@@ -400,7 +400,7 @@ for line in psfFile:
 
 		if readpsf == 'angle':
 			angleNumber = len(segments)/3
-			for i in range(angleNumber):
+			for i in range(int(angleNumber)):
 				atom1 = int(segments[3*i+0])
 				atom2 = int(segments[3*i+1])
 				atom3 = int(segments[3*i+2])
@@ -417,7 +417,7 @@ for line in psfFile:
 
 		if readpsf == 'dihedral':
 			dihedralNumber = len(segments)/4
-			for i in range(dihedralNumber):
+			for i in range(int(dihedralNumber)):
 				atom1 = int(segments[4*i+0])
 				atom2 = int(segments[4*i+1])
 				atom3 = int(segments[4*i+2])
@@ -436,7 +436,7 @@ for line in psfFile:
 
 		if readpsf == 'improper':
 			improperNumber = len(segments)/4
-			for i in range(improperNumber):
+			for i in range(int(improperNumber)):
 				atom1 = int(segments[4*i+0])
 				atom2 = int(segments[4*i+1])
 				atom3 = int(segments[4*i+2])
@@ -455,7 +455,7 @@ for line in psfFile:
 
 		if readpsf == 'group':
 			groupNumber = len(segments)/3
-			for i in range(groupNumber):
+			for i in range(int(groupNumber)):
 				atom1 = int(segments[3*i+0]) + 1
 				for imol in range(len(mol)):
 					fatom = molinfo[imol]['firstatomid']
@@ -682,7 +682,7 @@ for dihedral in type2dihedral:
 	if writeitp:
 		multNumber = type2mult[type1,type2,type3,type4]
 		if multNumber >= 1:
-			for m in range(multNumber):
+			for m in range(int(multNumber)):
 				phi  = type2dihedral[type1,type2,type3,type4][m*3]
 				cp   = type2dihedral[type1,type2,type3,type4][m*3+1]
 				mult = type2dihedral[type1,type2,type3,type4][m*3+2]
