@@ -38,8 +38,8 @@ A NVT simulation for common production-level simulations
     ntr=1,         ! Positional restraints for proteins, sugars, and ligands
 
     ! Set water atom/residue names for SETTLE recognition
-    watnam='WAT',  ! Water residues are named WAT
-    owtnm='O',     ! Water oxygens are named O
+    watnam='TIP3',  ! Water residues are named WAT
+    owtnm='OH2',     ! Water oxygens are named O
  /
 
  &ewald

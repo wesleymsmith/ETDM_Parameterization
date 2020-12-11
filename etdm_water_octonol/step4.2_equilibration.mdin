@@ -14,8 +14,8 @@ A NVT simulation for common production-level simulations
     fswitch=10.0,  ! Force-based switching
 
     ! MD settings
-    nstlim=500000, ! 500K steps, 1 ns total
-    dt=0.002,      ! time step (ps)
+    nstlim=1250000, ! 1250K steps, 1.25 ns total
+    dt=0.001,      ! time step (ps)
 
     ! SHAKE
     ntc=2,         ! Constrain bonds containing hydrogen
@@ -40,8 +40,8 @@ A NVT simulation for common production-level simulations
     pres0=1.0,   ! Target external pressure = 1.0 bar
 
     ! Set water atom/residue names for SETTLE recognition
-    watnam='WAT',  ! Water residues are named WAT
-    owtnm='O',     ! Water oxygens are named O
+    watnam='TIP3',  ! Water residues are named WAT
+    owtnm='OH2',     ! Water oxygens are named O
  /
 
  &ewald

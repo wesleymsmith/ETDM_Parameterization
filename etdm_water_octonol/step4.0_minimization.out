@@ -6,7 +6,7 @@
 | PMEMD implementation of SANDER, Release 18
 
 |  Compiled date/time: Mon Apr 27 18:19:54 2020
-| Run on 12/10/2020 at 16:03:30
+| Run on 12/10/2020 at 16:16:48
 
 |   Executable path: /cm/shared/apps/amber20/bin/pmemd.cuda
 | Working directory: /data/wesley/ETDM_Parameterization/etdm_water_octonol
@@ -64,7 +64,7 @@ END
                                                                                
 
 
-Note: ig = -1. Setting random seed to    72021 based on wallclock time in 
+Note: ig = -1. Setting random seed to   335329 based on wallclock time in 
       microseconds.
 | irandom = 1, using AMBER's internal random number generator (default).
  
@@ -791,14 +791,14 @@ restart created by ParmEd
 |
 |     Routine           Sec        %
 |     ------------------------------
-|     Nonbond           3.85   21.12
+|     Nonbond           3.84   20.83
 |     Bond              0.00    0.00
 |     Angle             0.00    0.00
 |     Dihedral          0.00    0.00
 |     Shake             0.00    0.00
-|     Other            14.36   78.88
+|     Other            14.58   79.17
 |     ------------------------------
-|     Total            18.21
+|     Total            18.41
 
 |  PME Nonbond Pairlist CPU Time:
 |
@@ -831,9 +831,9 @@ restart created by ParmEd
 |     ---------------------------------
 |     Total                0.00    0.00
 
-|  Setup CPU time:            1.44 seconds
-|  NonSetup CPU time:        18.21 seconds
-|  Total CPU time:           19.64 seconds     0.01 hours
+|  Setup CPU time:            1.30 seconds
+|  NonSetup CPU time:        18.41 seconds
+|  Total CPU time:           19.72 seconds     0.01 hours
 
 |  Setup wall time:           2    seconds
 |  NonSetup wall time:       18    seconds
