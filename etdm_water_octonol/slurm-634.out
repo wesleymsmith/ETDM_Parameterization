@@ -1,5 +1,0 @@
-running z-pressure equilibration (semi-isotropic):
-/cm/shared/apps/amber20/bin/pmemd.cuda -O -i step4.2_equilibration.mdin -c step4.1_equilibration.rst7
--p etdm_water_octonol.parm7 -r step4.2_equilibration.rst7 -ref step4.1_equilibration.rst7 
--o step4.2_equilibration.out -x step4.2_equilibration.nc
-done
