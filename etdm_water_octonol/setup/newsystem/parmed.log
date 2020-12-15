@@ -1,9 +1,0 @@
-# Log started on 12/09/2020 [mm/dd/yyyy] at 18:42:48
-gromber topol.top prod.mol.pdb
-parmout out newsys.parm7 newsys.rst7
-parmout  newsys.parm7 newsys.rst7
-go
-# Log started on 12/10/2020 [mm/dd/yyyy] at 15:23:28
-help
-help gromber
-quit
