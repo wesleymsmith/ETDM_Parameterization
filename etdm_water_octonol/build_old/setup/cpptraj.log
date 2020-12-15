@@ -1,0 +1,10 @@
+# 12/09/20 16:59:23
+quit
+# 12/09/20 16:59:44
+# /home/wesley/work/ETDM_Parameterization/etdm_water_simulation/amber/step3_input.parm7
+# Loaded topologies:
+#   /home/wesley/work/ETDM_Parameterization/etdm_water_simulation/amber/step3_input.parm7
+trajin /home/wesley/work/ETDM_Parameterization/etdm_water_simulation/amber/step7_production.rst7
+trajout etdm_sys.s7.pdb
+go
+quit

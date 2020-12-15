@@ -1,0 +1,10 @@
+# Log started on 12/15/2020 [mm/dd/yyyy] at 14:54:17
+help gromber
+ls
+gromber topol.top etdm_water_ocoh.gro topdir gromacs
+quit
+# Log started on 12/15/2020 [mm/dd/yyyy] at 14:59:11
+gromber topol.top etdm_water_ocoh.gro topdir gromacs
+outparm etdm_water_ocoh.parm7 etdm_water_ocoh.rst7
+writeCoordinates etdm_water_ocoh.pdb
+go

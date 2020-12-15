@@ -1,0 +1,17 @@
+running minimization:
+/cm/shared/apps/amber20/bin/pmemd.cuda -O -i step4.0_minimization.mdin -c etdm_water_octonol.rst7
+-p etdm_water_octonol.parm7 -r step4.0_minimization.rst7 -ref etdm_water_octonol.rst7 
+-o step4.0_minimization.out -x step4.0_minimization.nc
+running thermal equilibration:
+/cm/shared/apps/amber20/bin/pmemd.cuda -O -i step4.1_equilibration.mdin -c step4.0_minimization.rst7
+-p etdm_water_octonol.parm7 -r step4.1_equilibration.rst7 -ref step4.0_minimization.rst7 
+-o step4.1_equilibration.out -x step4.1_equilibration.nc
+running pressure equilibration:
+/cm/shared/apps/amber20/bin/pmemd.cuda -O -i step4.2_equilibration.mdin -c step4.1_equilibration.rst7
+-p etdm_water_octonol.parm7 -r step4.2_equilibration.rst7 -ref step4.1_equilibration.rst7 
+-o step4.2_equilibration.out -x step4.2_equilibration.nc
+running production:
+/cm/shared/apps/amber20/bin/pmemd.cuda -O -i step5_production.mdin -c step4.2_equilibration.rst7
+-p etdm_water_octonol.parm7 -r step5_production.rst7 -ref step4.2_equilibration.rst7 
+-o step5_production.out -x step5_production.nc
+done

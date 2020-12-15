@@ -1,13 +1,8 @@
-# 12/11/20 10:53:24
-# etdm_water_octonol.parm7
+# 12/15/20 13:28:56
+# etdm_water.parm7
 # Loaded topologies:
-#   etdm_water_octonol.parm7
-trajin step4.1_equilibration.nc
-help
-help list
-list
-help trajout
-trajout step4.1_equilibration.01.dcd start 0 stop 124
-trajout step4.1_equilibration.02.dcd start 125 stop 250
+#   etdm_water.parm7
+trajin etdm_water.prod.rst7
+trajout etdm_water.prod.pdb
 go
-exit
+quit

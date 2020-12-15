@@ -1,0 +1,13 @@
+# Log started on 12/10/2020 [mm/dd/yyyy] at 15:30:26
+gromber gromacs/topol.top merge1.pdb
+gromber gromacs/topol.top merge1.pdb topdir gromacs
+gromber gromacs/topol.top merge1.pdb topdir /home/wesley/bin/anaconda3/share/gromacs/top
+quit
+# Log started on 12/10/2020 [mm/dd/yyyy] at 15:47:27
+gromber topol.top merge1.pdb topdir gromacs
+quit
+# Log started on 12/10/2020 [mm/dd/yyyy] at 15:50:41
+gromber topol.top merge1.pdb topdir gromacs
+writeCoordinates etdm_water_octonol.rst7
+outparm etdm_water_octonol.parm7
+go
