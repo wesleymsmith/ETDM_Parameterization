@@ -1,0 +1,6 @@
+running z-pressure equilibration (semi-isotropic):
+/home/wesley/amber18/bin/pmemd.cuda -O -i step4.3_equilibration.mdin -c step4.2_equilibration.rst7
+-p etdm_water_octonol.parm7 -r step4.3_equilibration.rst7 -ref step4.2_equilibration.rst7 
+-o step4.3_equilibration.out -x step4.3_equilibration.nc
+slurmstepd: error: execve(): /home/wesley/amber18/bin/pmemd.cuda: No such file or directory
+srun: error: node001: task 0: Exited with exit code 2

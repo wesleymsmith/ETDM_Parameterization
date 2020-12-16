@@ -1,0 +1,8 @@
+running z-pressure equilibration (semi-isotropic):
+/cm/shared/apps/amber20/bin/pmemd.cuda -O -i step4.3_equilibration.mdin -c step4.2_equilibration.rst7
+-p etdm_water_octonol.parm7 -r step4.3_equilibration.rst7 -ref step4.2_equilibration.rst7 
+-o step4.3_equilibration.out -x step4.3_equilibration.nc
+
+  Unit    8 Error on OPEN: etdm_water_octonol.parm7                                                                                                                                                                                                                                        
+STOP PMEMD Terminated Abnormally!
+srun: error: node001: task 0: Exited with exit code 1
