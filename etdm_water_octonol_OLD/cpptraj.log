@@ -1,0 +1,45 @@
+# 12/11/20 10:53:24
+# etdm_water_octonol.parm7
+# Loaded topologies:
+#   etdm_water_octonol.parm7
+trajin step4.1_equilibration.nc
+help
+help list
+list
+help trajout
+trajout step4.1_equilibration.01.dcd start 0 stop 124
+trajout step4.1_equilibration.02.dcd start 125 stop 250
+go
+exit
+# 12/11/20 11:05:00
+# etdm_water_octonol.parm7
+# Loaded topologies:
+#   etdm_water_octonol.parm7
+trajin step4.2_equilibration.nc
+trajout step4.2_equilibration.dcd
+go
+quit
+# 12/11/20 11:06:13
+# etdm_water_octonol.parm7
+# Loaded topologies:
+#   etdm_water_octonol.parm7
+trajin step5_production.nc
+trajout step5_production.dcd
+go
+quit
+# 12/11/20 11:09:25
+# etdm_water_octonol.parm7
+# Loaded topologies:
+#   etdm_water_octonol.parm7
+trajin step5_production.rst7
+trajout step5_production.pdb
+go
+quit
+# 12/11/20 12:28:38
+# etdm_water_octonol.parm7
+# Loaded topologies:
+#   etdm_water_octonol.parm7
+trajin step4.2_equilibration.nc
+trajout step4.2_equilibration.dcd
+go
+quit

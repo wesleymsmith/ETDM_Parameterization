@@ -15,15 +15,15 @@ A NVT simulation for common production-level simulations
 
     ! MD settings
     nstlim=1250000, ! 1250K steps, 1.25 ns total
-    dt=0.001,      ! time step (ps)
+    dt=0.002,      ! time step (ps)
 
     ! SHAKE
     ntc=2,         ! Constrain bonds containing hydrogen
     ntf=2,         ! Do not calculate forces of bonds containing hydrogen
 
     ! Control how often information is printed
-    ntpr=1000,     ! Print energies every 1000 steps
-    ntwx=10000,    ! Print coordinates every 10K steps (10 ps) to the trajectory
+    ntpr=5000,     ! Print energies every 1000 steps
+    ntwx=5000,    ! Print coordinates every 10K steps (10 ps) to the trajectory
     ntwr=100000,    ! Print a restart file every 100K steps (can be less frequent)
 !   ntwv=-1,       ! Uncomment to also print velocities to trajectory
 !   ntwf=-1,       ! Uncomment to also print forces to trajectory
@@ -34,12 +34,12 @@ A NVT simulation for common production-level simulations
     iwrap=1,
 
     ! Restraint options
-    !nmropt=1,      ! Dihedral restraints for sugars and lipids
+    nmropt=1,      ! Dihedral restraints for sugars and lipids
     !csurften=3,
     !gamma_ten=0.0,
     !ninterface=2,
     
-    !ntr=1, !allow etdm to move
+    ntr=1, !pin a single water and octanol for use as pmf restraint loci
     ! Constant pressure control
     barostat=2,  !MC barostat
     ntp=1,       !1=isotropic; 2=anisotropic, 3=semi-isotropic w/ surften
@@ -54,3 +54,26 @@ A NVT simulation for common production-level simulations
     vdwmeth = 0,
  /
 
+PMF Restraint water region locus
+100.0
+RES 3749 3749
+END
+PMF Restraint octanol region locus
+100.0
+RES 7171 7171
+END
+
+ &wt
+   type='DUMPFREQ',istep1=5000
+ /
+
+ &wt
+    type='END'
+
+ /
+
+DISANG=step5.00.0_pmfSetup.rest
+DUMPAVE=step5.00.0_pmfSetup.dat
+LISTIN=POUT
+LISTOUT=POUT
+/
