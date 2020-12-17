@@ -1,0 +1,8 @@
+# 12/16/20 18:29:10
+# etdm_water_ocoh.parm7
+# Loaded topologies:
+#   etdm_water_ocoh.parm7
+trajin etdm_water_ocoh.equilibrated.ncrst
+trajout etdm_water_ocoh.equilibrated.rst7
+go
+quit
