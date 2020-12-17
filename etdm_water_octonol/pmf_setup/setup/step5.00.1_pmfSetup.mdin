@@ -1,20 +1,21 @@
-A NVT simulation for common production-level simulations
+A NPT simulation for common production-level simulations
  &cntrl
     imin=0,        ! No minimization
-    irest=1,       ! This IS a restart of an old MD simulation
-    ntx=5,         ! So our inpcrd file has velocities
-
+    irest=0,       ! This IS a restart of an old MD simulation
+    ntx=1,         ! So our inpcrd file has NO velocities
+    !infe=1 		! use nfe module
+ 
     ! Temperature control
     ntt=3,         ! Langevin dynamics
     gamma_ln=1.0,  ! Friction coefficient (ps^-1)
-    temp0=303.15,   ! Target temperature
+    temp0=310.15,   ! Target temperature
 
     ! Potential energy control
-    cut=12.0,      ! nonbonded cutoff, in Angstroms
+    cut=12.0,      ! Nonbonded cutoff, in Angstroms
     fswitch=10.0,  ! Force-based switching
 
     ! MD settings
-    nstlim=1250000, ! 1250K steps, 1.25 ns total
+    nstlim=25000,  ! 25K steps, 25 ps total
     dt=0.001,      ! time step (ps)
 
     ! SHAKE
@@ -23,27 +24,39 @@ A NVT simulation for common production-level simulations
 
     ! Control how often information is printed
     ntpr=1000,     ! Print energies every 1000 steps
-    ntwx=10000,    ! Print coordinates every 10K steps (10 ps) to the trajectory
-    ntwr=100000,    ! Print a restart file every 100K steps (can be less frequent)
+    ntwx=1000,     ! Print coordinates every 1000 steps to the trajectory
+    ntwr=10000,    ! Print a restart file every 10K steps (can be less frequent)
 !   ntwv=-1,       ! Uncomment to also print velocities to trajectory
 !   ntwf=-1,       ! Uncomment to also print forces to trajectory
     ntxo=2,        ! Write NetCDF format
     ioutfm=1,      ! Write NetCDF format (always do this!)
 
     ! Wrap coordinates when printing them to the same unit cell
-    iwrap=1,
+    iwrap=0,
 
-    ! Restraint options
-    !nmropt=1,      ! Dihedral restraints for sugars and lipids
-    !csurften=3,
-    !gamma_ten=0.0,
-    !ninterface=2,
-    
-    !ntr=1, !allow etdm to move
-    ! Constant pressure control
-    barostat=2,  !MC barostat
-    ntp=1,       !1=isotropic; 2=anisotropic, 3=semi-isotropic w/ surften
-    pres0=1.0,   ! Target external pressure = 1.0 bar
+    ! Constant pressure control.
+    !barostat=2,    ! MC barostat... change to 1 for Berendsen
+    !ntp=1,         ! 1=isotropic, 2=anisotropic, 3=semi-isotropic w/ surften
+    !pres0=1.0,     ! Target external pressure, in bar
+
+    ! Constant surface tension (needed for semi-isotropic scaling). Uncomment
+    ! for this feature. csurften must be nonzero if ntp=3 above
+    !csurften=3,    ! Interfaces in 1=yz plane, 2=xz plane, 3=xy plane
+    !gamma_ten=0.0, ! Surface tension (dyne/cm). 0 gives pure semi-iso scaling
+    !ninterface=2,  ! Number of interfaces (2 for bilayer)
+
+	! Restraint options
+	! nmropt used to: 
+	! 1) restrain beams from deflecting too far from
+	! 	 plug region
+	! 2) pull / restrain 3 sets of 6 ligands each to stay within
+	! 	 35 Å of the chimera binding pocket region of the nearest chain
+        ntr=1,	   ! Positional restraints
+        restraint_wt=100.00,
+        restraintmask=':3749,7171'
+
+	! Restraint options
+    	nmropt=1,      ! Dihedral restraints for sugars and lipids
 
     ! Set water atom/residue names for SETTLE recognition
     watnam='TIP3',  ! Water residues are named WAT
@@ -54,3 +67,16 @@ A NVT simulation for common production-level simulations
     vdwmeth = 0,
  /
 
+&wt
+   type='DUMPFREQ',istep1=5000
+ /
+
+&wt
+  type='END'
+ /
+
+DISANG=step5.00.1_pmfSetup.rest
+DUMPAVE=step5.00.1_pmfSetup.dat
+LISTIN=POUT
+LISTOUT=POUT
+/

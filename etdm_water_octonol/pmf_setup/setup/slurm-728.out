@@ -1,0 +1,5 @@
+running pressure equilibration (isotropic):
+/cm/shared/apps/amber20/bin/pmemd.cuda -O -i step5.00.1_pmfSetup.mdin -c etdm_phaseBoundary.rst7
+-p etdm_water_ocoh.parm7 -r step5.00.1_pmfSetup.rst7 -ref etdm_phaseBoundary.rst7 
+-o step5.00.1_pmfSetup.out -x step5.00.1_pmfSetup.nc
+done
