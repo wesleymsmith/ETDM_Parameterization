@@ -13,8 +13,8 @@ source /etc/profile.d/modules.sh
 set -e
 toppath="etdm_water_ocoh.parm7"
 
-prev_step="etdm_phaseBoundary"
-step="step5.00.1_pmfSetup"
+prev_step="step5.00.1_pmfSetup"
+step="step5.00.2_pmfSetup"
 #step=testRun
 echo "running pressure equilibration (isotropic):" 
 echo "$AMBERHOME/bin/pmemd.cuda -O -i $step.mdin -c $prev_step.rst7"
